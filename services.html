@@ -1,0 +1,120 @@
+<!-- services section-->
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Updated to match main page */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .text-center {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #000000; /* Updated to match main page */
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-size: 1.5rem;
+            color: #333; /* Updated to match main page */
+            margin-top: 10px;
+        }
+        p {
+            font-size: 1rem;
+            color: #666; /* Updated to match main page */
+            margin-top: 10px;
+        }
+        .card {
+            background-color: #a4a7ca; /* Updated to match main page */
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .serviceIcon {
+            font-size: 2.5rem;
+            color:#fd8f28;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .card-text {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .col-lg-4 {
+            flex: 1;
+            max-width: 30%;
+            margin: 10px;
+        }
+        @media (max-width: 768px) {
+            .col-lg-4 {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+    
+<body>
+<section id="services">
+    <div class="container">
+        <h1 class="text-center">Our Services</h1>
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <div class="card serviceCard">
+                    <div class="card-body">
+                        <i class="fas serviceIcon fa-code"></i>
+                        <h4 class="card-title mt-3">Web Development</h4>
+                        <p class="card-text mt-3">We offer professional web development services to help you build a strong online presence. Our team specializes in creating responsive, user-friendly websites tailored to your business needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-4">
+                <div class="card serviceCard">
+                    <div class="card-body">
+                        <i class="fas serviceIcon fa-paint-brush"></i>
+                        <h4 class="card-title mt-3">Video Editing</h4>
+                        <p class="card-text mt-3">Our video editing services include professional editing, color correction, and special effects to help you create captivating videos that engage your audience and enhance your brand's visual storytelling.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-4">
+                <div class="card serviceCard">
+                    <div class="card-body">
+                        <i class="fas serviceIcon fa-chart-line"></i>
+                        <h4 class="card-title mt-3">SEO Optimization</h4>
+                        <p class="card-text mt-3">We provide SEO optimization services to improve your website's visibility on search engines. Our strategies are designed to increase organic traffic and boost your search engine rankings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
