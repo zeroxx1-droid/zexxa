@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit III - Functions</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Unit III: Functions</h1>
+    <nav>
+      <a href="unit2.html">← Previous</a> |
+      <a href="unit4.html">Next →</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Theory</h2>
+    <p>Functions in C are blocks of reusable code. They can be:</p>
+    <ul>
+      <li>User-defined</li>
+      <li>Library functions (like <code>printf</code>, <code>scanf</code>)</li>
+      <li>Recursive functions (calling themselves)</li>
+    </ul>
+
+    <h2>Example 1 – Function Addition</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int add(int x, int y) {
+    return x + y;
+}
+int main() {
+    printf("Sum = %d", add(3,4));
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Sum = 7</pre>
+
+    <h2>Example 2 – Recursion (Factorial)</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int fact(int n) {
+    if(n == 0) return 1;
+    return n * fact(n-1);
+}
+int main() {
+    printf("Factorial = %d", fact(5));
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Factorial = 120</pre>
+
+    <h2>Quiz</h2>
+    <p>What is the default return type of a C function (if not specified)?</p>
+    <button onclick="checkAnswer('A')">A. void</button>
+    <button onclick="checkAnswer('B')">B. int</button>
+    <button onclick="checkAnswer('C')">C. float</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

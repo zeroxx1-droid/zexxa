@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit V - Structures & Pointers</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Unit V: Structures & Pointers</h1>
+    <nav>
+      <a href="unit4.html">← Previous</a> |
+      <a href="unit6.html">Next →</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Theory</h2>
+    <p><b>Structures</b> allow grouping different data types under one name.  
+    <b>Pointers</b> are variables that store the memory address of another variable.</p>
+    <ul>
+      <li><code>*</code> → dereference operator</li>
+      <li><code>&</code> → address operator</li>
+      <li><code>-></code> → access structure members through pointer</li>
+    </ul>
+
+    <h2>Example 1 – Structure with Pointer</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+struct Student {
+    int id;
+    char name[20];
+};
+int main() {
+    struct Student s1 = {1, "Amit"};
+    struct Student *ptr = &s1;
+    printf("ID: %d, Name: %s", ptr->id, ptr->name);
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>ID: 1, Name: Amit</pre>
+
+    <h2>Example 2 – Pointer Basics</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int x = 50;
+    int *p = &x;
+    printf("Value of x = %d\n", x);
+    printf("Address of x = %p\n", p);
+    printf("Value via pointer = %d\n", *p);
+    return 0;
+}
+    </pre>
+    <p><b>Output (example):</b></p>
+    <pre>
+Value of x = 50
+Address of x = 0x7ffca0...
+Value via pointer = 50
+    </pre>
+
+    <h2>Quiz</h2>
+    <p>Which operator is used to access members using a pointer?</p>
+    <button onclick="checkAnswer('A')">A. .</button>
+    <button onclick="checkAnswer('B')">B. -></button>
+    <button onclick="checkAnswer('C')">C. *</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

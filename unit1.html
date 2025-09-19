@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit I - Basics of C Programming</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Unit I: Basics of C Programming</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="unit2.html">Next →</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Theory</h2>
+    <p>C is a structured, procedural programming language. Every C program has:</p>
+    <ul>
+      <li>Header files (like <code>#include &lt;stdio.h&gt;</code>)</li>
+      <li>Main function <code>int main()</code></li>
+      <li>Statements ending with <code>;</code></li>
+      <li>Data types: <code>int</code>, <code>float</code>, <code>char</code>, <code>double</code></li>
+      <li>Variables, constants, and operators</li>
+    </ul>
+
+    <h2>Example 1 – Hello World</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Hello, World!</pre>
+
+    <h2>Example 2 – Variables & Operators</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10, b = 20;
+    int sum = a + b;
+    printf("Sum = %d", sum);
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Sum = 30</pre>
+
+    <h2>Example 3 – Data Types</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int age = 20;
+    float gpa = 8.5;
+    char grade = 'A';
+    printf("Age: %d, GPA: %.1f, Grade: %c", age, gpa, grade);
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Age: 20, GPA: 8.5, Grade: A</pre>
+
+    <h2>Quiz</h2>
+    <p>Which of these is a valid C keyword?</p>
+    <button onclick="checkAnswer('A')">A. main</button>
+    <button onclick="checkAnswer('B')">B. int</button>
+    <button onclick="checkAnswer('C')">C. print</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

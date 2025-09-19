@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit VI - File Handling</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Unit VI: File Handling</h1>
+    <nav>
+      <a href="unit5.html">← Previous</a> |
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Theory</h2>
+    <p>File handling allows reading and writing data to files.  
+    Modes in <code>fopen()</code>:</p>
+    <ul>
+      <li><b>"r"</b> → read</li>
+      <li><b>"w"</b> → write (overwrites)</li>
+      <li><b>"a"</b> → append</li>
+    </ul>
+
+    <h2>Example 1 – Write to File</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    FILE *f = fopen("test.txt", "w");
+    fprintf(f, "Hello File!");
+    fclose(f);
+    return 0;
+}
+    </pre>
+    <p><b>Output inside file <code>test.txt</code>:</b></p>
+    <pre>Hello File!</pre>
+
+    <h2>Example 2 – Read from File</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    FILE *f = fopen("test.txt", "r");
+    char str[50];
+    fscanf(f, "%s", str);
+    printf("File content: %s", str);
+    fclose(f);
+    return 0;
+}
+    </pre>
+    <p><b>Output (if file has "Hello"):</b></p>
+    <pre>File content: Hello</pre>
+
+    <h2>Quiz</h2>
+    <p>Which mode is used in fopen() to write to a file?</p>
+    <button onclick="checkAnswer('A')">A. r</button>
+    <button onclick="checkAnswer('B')">B. w</button>
+    <button onclick="checkAnswer('C')">C. a</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

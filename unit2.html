@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit II - Control Structures</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Unit II: Control Structures</h1>
+    <nav>
+      <a href="unit1.html">← Previous</a> |
+      <a href="unit3.html">Next →</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Theory</h2>
+    <p>Control structures allow decision-making and looping in C. Common ones are:</p>
+    <ul>
+      <li>If, if-else, nested if</li>
+      <li>Switch-case</li>
+      <li>Loops: for, while, do-while</li>
+    </ul>
+
+    <h2>Example 1 – Even or Odd</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int num = 7;
+    if(num % 2 == 0)
+        printf("Even");
+    else
+        printf("Odd");
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Odd</pre>
+
+    <h2>Example 2 – Multiplication Table</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int i;
+    for(i=1; i<=5; i++) {
+        printf("2 x %d = %d\n", i, 2*i);
+    }
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+    </pre>
+
+    <h2>Quiz</h2>
+    <p>Which loop executes at least once?</p>
+    <button onclick="checkAnswer('A')">A. for</button>
+    <button onclick="checkAnswer('B')">B. while</button>
+    <button onclick="checkAnswer('C')">C. do-while</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

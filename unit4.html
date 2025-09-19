@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit IV - Strings</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Unit IV: String Handling</h1>
+    <nav>
+      <a href="unit3.html">← Previous</a> |
+      <a href="unit5.html">Next →</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Theory</h2>
+    <p>Strings in C are arrays of characters ending with a null character <code>\\0</code>. 
+    Common library functions are declared in <code>&lt;string.h&gt;</code>:</p>
+    <ul>
+      <li><code>strlen()</code> → length of string</li>
+      <li><code>strcpy()</code> → copy string</li>
+      <li><code>strcat()</code> → concatenate strings</li>
+      <li><code>strcmp()</code> → compare strings</li>
+    </ul>
+
+    <h2>Example 1 – String Concatenation</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char s1[20] = "Hello ";
+    char s2[] = "World";
+    strcat(s1, s2);
+    printf("%s", s1);
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Hello World</pre>
+
+    <h2>Example 2 – String Length</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char str[] = "Programming";
+    printf("Length = %lu", strlen(str));
+    return 0;
+}
+    </pre>
+    <p><b>Output:</b></p>
+    <pre>Length = 11</pre>
+
+    <h2>Quiz</h2>
+    <p>Which function is used to find the length of a string?</p>
+    <button onclick="checkAnswer('A')">A. strlen()</button>
+    <button onclick="checkAnswer('B')">B. strcpy()</button>
+    <button onclick="checkAnswer('C')">C. strcmp()</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
