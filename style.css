@@ -1,3 +1,26 @@
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fd8f28;
+    font-size: 2.8rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    z-index: 200;
+}
+
+@media (max-width: 995px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 2.5rem;
+        top: 1.2rem;
+    }
+    header nav {
+        z-index: 150;
+    }
+}
 /* C Programming Page Styles */
 .c-section {
     max-width: 900px;

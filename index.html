@@ -11,7 +11,9 @@
 <body>
     <header>
         <a href="#" class="logo">ZEROXX!</a>
-
+        <button class="menu-toggle" aria-label="Open navigation menu">
+            <i class="fa fa-bars"></i>
+        </button>
         <nav>
             <a href="#" class="active"> Home</a>
             <a href="services.html" >Services</a>
@@ -42,5 +44,15 @@
             <a href="contact.html" class="btn">Work with me</a>
         </div>
     </section>
+</body>
+<script>
+// Hamburger menu toggle for mobile nav
+const menuBtn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('header nav');
+menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>
+</html>
 </body>
 </html>
