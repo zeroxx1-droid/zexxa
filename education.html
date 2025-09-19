@@ -4,7 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn C Programming</title>
-  <link rel="stylesheet" href="style1.css">
+  <style>
+    :root {
+      --accent: #fd8f28;
+      --bg: #121212;
+      --bg-card: #1e1e1e;
+      --text: #fff;
+      --text-dim: #ccc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--bg-card);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      color: var(--text-dim);
+      font-size: 1rem;
+    }
+
+    /* Horizontal navbar */
+    nav.unit-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: var(--bg-card);
+      width: 100%;
+      padding: 0.6rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 80px; /* below header */
+      z-index: 90;
+    }
+    nav.unit-nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    nav.unit-nav a:hover,
+    nav.unit-nav a.active {
+      background: var(--accent);
+      color: #000;
+    }
+
+    main {
+      max-width: 800px;
+      width: 90%;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--bg-card);
+      border-radius: 0.8rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    main h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    main p {
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin: 2rem 0 1rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      header h1 { font-size: 1.5rem; }
+      nav.unit-nav a { margin: 0.3rem 0.2rem; padding: 0.4rem 0.8rem; }
+      main { padding: 1.5rem 1rem; }
+    }
+
+  </style>
 </head>
 <body>
   <header>
@@ -12,8 +114,8 @@
     <p>BCA-SEM-1 C Programming Course (Units I – VI)</p>
   </header>
 
-  <nav>
-    <a href="unit1.html">Unit I</a>
+  <nav class="unit-nav">
+    <a href="unit1.html" class="active">Unit I</a>
     <a href="unit2.html">Unit II</a>
     <a href="unit3.html">Unit III</a>
     <a href="unit4.html">Unit IV</a>
@@ -24,11 +126,11 @@
   <main>
     <h2>Welcome!</h2>
     <p>This website covers the full <b>BCA-104 C Programming syllabus</b> in 6 units with theory, examples, and quizzes.</p>
-    <p>Start learning by selecting a unit above!</p>
+    <p>Start learning by selecting a unit from the navbar above!</p>
   </main>
 
   <footer>
-    <p>&copy; 2025 Learn C Programming | Designed for BCA Students by ZEROXX</p>
+    &copy; 2025 Learn C Programming | Designed for BCA Students by ZEROXX
   </footer>
 </body>
 </html>
